@@ -14,8 +14,7 @@ function getUserInfo() {
         method: 'GET',
         url: '/my/userinfo',
         success: function (result) {
-            console.log(result);
-            if (result.status !== 0) return layui.layer.msg('获取用户信息失败!');
+            if (result.status !== 0) return layer.msg('获取用户信息失败!');
             renderAvatar(result.data);
         }
     })
